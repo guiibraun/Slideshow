@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
 }
@@ -23,15 +27,36 @@ header {
 .slider--width{
     height: 100%;
     display: flex;
-    width: calc(100vw * 3);
     transition: all 0.3s ease ;
 }
 
 .slider--item{
     width: 100vw;
     height: inherit;
+    background-size: cover;
+    background-position: center center;
 }
 
-.slider--item img{
-    width: 100vw;
+.slider--controls{
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+
+.slider--control{
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
 }
